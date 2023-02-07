@@ -1,3 +1,4 @@
+import { RodapeModule } from './components/rodape/rodape.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CabecalhoModule } from './components/cabecalho/cabecalho.module';
@@ -18,6 +19,7 @@ import { BodyComponent } from './view/body/body.component';
     AppRoutingModule,
     HttpClientModule,
     CabecalhoModule,
+    RodapeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,12 +2,14 @@
   <nav class="navbar navbar-light bg-white">
     <a class="navbar-brand">
       <i
-        class="fa fa-bars mr-2"
+        class="fa fa-bars mr-2 pt-3"
         (click)="menu.abreMenu()"
         (keyup.space)="menu.abreMenu()"
       >
       </i>
-      Rick Amaral
+      <div class="img-fluid logo">
+        <img src="assets/logo 3.png" alt="">
+      </div>
     </a>
 
     <app-menu #menu>
