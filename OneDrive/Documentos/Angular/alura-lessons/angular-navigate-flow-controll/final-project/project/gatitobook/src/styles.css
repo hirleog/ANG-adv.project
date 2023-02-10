@@ -1,0 +1,39 @@
+:root {
+  --primary-color: rgb(4, 236, 4);
+  --secondary-color: rgb(0, 194, 0);
+  --subtitle-color: rgb(63, 63, 63);
+
+}
+
+.subtile {
+  font-weight: 600;
+  color: var(--subtitle-color);
+}
+
+.value {
+  color: var(--primary-color);
+}
+
+.button-buy {
+  border-radius: 0.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 5em;
+  text-decoration: auto;
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.button-buy:hover {
+  border-radius: 0.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 5em;
+  text-decoration: auto;
+  color: white;
+  background-color: var(--secondary-color);
+}
