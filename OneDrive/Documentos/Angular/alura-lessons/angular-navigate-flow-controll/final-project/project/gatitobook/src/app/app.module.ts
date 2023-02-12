@@ -1,12 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 import { CabecalhoModule } from './componentes/cabecalho/cabecalho.module';
 import { RodapeModule } from './componentes/rodape/rodape.module';
-import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +17,7 @@ import { AutenticacaoModule } from './autenticacao/autenticacao.module';
     CabecalhoModule,
     RodapeModule,
     AutenticacaoModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

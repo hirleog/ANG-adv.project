@@ -64,6 +64,7 @@
   justify-content: center;
   align-items: center;
   width: 3em;
+  height: 45px;
   font-size: larger;
 }
 
@@ -71,3 +72,21 @@
   color: yellow;
   border: 1px solid yellow;
 }
+.btn-cart {
+  margin: 10px;
+}
+.btn-cart button {
+  height: 45px;
+  width: auto;
+  background-color: white;
+  color: var(--secondary-color);
+  border-color: var(--secondary-color-color);
+}
+
+.btn-cart button:hover {
+  height: 45px;
+  color: white;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+

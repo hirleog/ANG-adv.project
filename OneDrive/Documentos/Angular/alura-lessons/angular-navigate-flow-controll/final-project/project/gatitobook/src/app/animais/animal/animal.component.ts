@@ -21,12 +21,12 @@ export class AnimalComponent implements OnInit {
     }
   }
 
-  get url(): string {
-    return 'https://popipe.com.br/media/amasty/webp/catalog/product/cache/d1f4e779449d8a8829a098d981af7bac/5/_/5_-_seda_bloody_strawberry3-min_jpg.webp'
-  }
   // get url(): string {
-  //   return this.urlOriginal;
+  //   return 'https://popipe.com.br/media/amasty/webp/catalog/product/cache/d1f4e779449d8a8829a098d981af7bac/5/_/5_-_seda_bloody_strawberry3-min_jpg.webp'
   // }
+  get url(): string {
+    return this.urlOriginal;
+  }
 
   constructor() {}
 

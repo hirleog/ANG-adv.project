@@ -1,0 +1,7 @@
+.align-icons {
+  display: flex;
+  justify-content: center;
+}
+.align-icons a i {
+  color: rgb(72, 203, 243);
+}

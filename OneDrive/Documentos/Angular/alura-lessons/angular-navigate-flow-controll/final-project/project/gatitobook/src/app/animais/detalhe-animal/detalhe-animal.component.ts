@@ -15,6 +15,9 @@ export class DetalheAnimalComponent implements OnInit {
   animalId!: number;
   animal$!: Observable<Animal>;
   colorBtn: boolean = false;
+  show: boolean = false;
+
+  mostraCartBar = false;
 
   constructor(
     private animaisService: AnimaisService,
@@ -25,6 +28,10 @@ export class DetalheAnimalComponent implements OnInit {
   ngOnInit(): void {
     this.animalId = this.activatedRoute.snapshot.params.animalId;
     this.animal$ = this.animaisService.buscaPorID(this.animalId);
+  }
+
+  abreCart() {
+    this.mostraCartBar = !this.mostraCartBar;
   }
 
   curtir() {

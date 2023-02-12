@@ -16,7 +16,7 @@
           Caixa de Papel para Enrolar - Branqueado
           <!-- {{ product.detail }} -->
         </p>
-        <p class="details pb-5" style="color: var(--subtitle-color)">
+        <p class="details" style="color: var(--subtitle-color)">
           25 Livretos<br />
           Marca - <strong>LION</strong><br />
           Modelo -<strong>PEQUENA SLIM (75 x 44)</strong>
@@ -30,13 +30,13 @@
           </h4>
         </div>
 
-        <div class="functios-btn pt-3 pb-5">
+        <div class="functios-btn pt-3 pb-1">
           <div class="quantity">
             <div class="less fix">-</div>
             <div class="num fix">2</div>
             <div class="more fix">+</div>
           </div>
-          <div class="btn-buy" style="padding: 0px 0px 0px 0px;">
+          <div class="btn-buy" style="padding: 0px 0px 0px 0px">
             <!-- <button class="btn btn-primary" >Comprar</button> -->
             <a class="button-buy" href="https://mpago.la/2Er83xj">Comprar</a>
           </div>
@@ -44,9 +44,29 @@
             <i class="fa-regular fa-star"></i>
           </div>
         </div>
-
-        <div class="break-line"></div>
       </div>
+
+      <div class="btn-cart pb-4">
+        <button class="btn btn-primary">
+          Adicionar ao carrinho <i class="fa-light fa-cart-shopping"></i>
+        </button>
+      </div>
+
+      <a class="navbar-brand" style="color: rgb(4, 236, 4)">
+        <i
+          class="fa fa-bars mr-2"
+          (click)="menu.abreMenu()"
+          (keyup.space)="menu.abreMenu()"
+        >
+        </i>
+        Weed Store
+      </a>
+
+      <app-menu-cart #menu>
+        <p>teste</p>
+      </app-menu-cart>
+
+      <div class="break-line"></div>
     </div>
 
     <!-- // FICHA TECNICA -->

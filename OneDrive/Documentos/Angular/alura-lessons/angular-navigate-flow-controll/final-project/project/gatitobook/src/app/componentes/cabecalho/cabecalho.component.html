@@ -21,7 +21,13 @@
       </ul>
     </app-menu>
 
-    <div *ngIf="user$ | async as user">
+
+    <div *ngIf="user$ | async as user" style="display: flex; margin-left: 1em;">
+
+      <div>
+        <i class="fa-light fa-cart-shopping"></i>
+      </div>
+
       <div *ngIf="user.name; else login">
         <i class="fa fa-user-circle mr-1"> </i>
         <a class="mr-1">{{ user.name }}</a>
