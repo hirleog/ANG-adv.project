@@ -1,3 +1,4 @@
+import { CartShoppingComponent } from './../componentes/cart-shopping/cart-shopping.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DetalheAnimalComponent } from './detalhe-animal/detalhe-animal.component';
@@ -19,10 +20,6 @@ const routes: Routes = [
   },
   {
     path: ':animalId',
-    component: DetalheAnimalComponent,
-  },
-  {
-    path: 'acessorios',
     component: DetalheAnimalComponent,
   },
 ];

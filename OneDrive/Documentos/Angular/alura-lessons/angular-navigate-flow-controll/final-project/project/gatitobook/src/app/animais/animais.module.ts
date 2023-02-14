@@ -12,6 +12,7 @@ import { MensagemModule } from '../componentes/mensagem/mensagem.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { NovoAnimalComponent } from './novo-animal/novo-animal.component';
+import { CartShoppingComponent } from '../componentes/cart-shopping/cart-shopping.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NovoAnimalComponent } from './novo-animal/novo-animal.component';
     DetalheAnimalComponent,
     ComentariosComponent,
     NovoAnimalComponent,
+    CartShoppingComponent,
   ],
   imports: [CommonModule, AnimaisRoutingModule, CartaoModule, SharedModule],
 })

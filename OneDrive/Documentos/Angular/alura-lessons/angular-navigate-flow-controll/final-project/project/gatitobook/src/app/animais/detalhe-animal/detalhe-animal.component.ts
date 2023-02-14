@@ -51,4 +51,9 @@ export class DetalheAnimalComponent implements OnInit {
       (error) => console.log(error)
     );
   }
+
+  goToCart() {
+    const id = this.animaisService.buscaPorID(this.animalId);
+    this.router.navigate([`/${id}/carrinho/`])
+  }
 }
