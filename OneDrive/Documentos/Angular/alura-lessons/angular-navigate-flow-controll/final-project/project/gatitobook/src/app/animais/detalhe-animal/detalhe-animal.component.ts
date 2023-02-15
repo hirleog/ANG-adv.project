@@ -17,6 +17,8 @@ export class DetalheAnimalComponent implements OnInit {
   colorBtn: boolean = false;
   show: boolean = false;
 
+  titleCard = 'CX. SEDA LION ROLLING CIRCUS 1 1/4 BLOODY STRAWBERRY'
+
   mostraCartBar = false;
 
   constructor(
