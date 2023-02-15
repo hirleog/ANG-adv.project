@@ -62,86 +62,7 @@
         </button>
       </div> -->
 
-      <app-menu-cart #menu>
-        <div>
-          <ul class="navbar-nav cart-items">
-            <li class="nav-item">
-              <div class="media">
-                <div>
-                  <img
-                    class="img-fluid"
-                    src="/assets/img/home.jpg"
-                    onError="this.src='/assets/img/no-img.jpg';"
-                    alt="error"
-                  />
-                </div>
-                <div class="media-body">
-                  <h5>CX. SEDA LION ROLLING CIRCUS 1 1/4 BLOODY STRAWBERRY</h5>
-
-                  <div class="card-details">
-                    <span>R$1200$</span>
-                    <span>Quantidade: 1</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <h4>Resumo do pedido</h4>
-            </li>
-            <li>
-              <p>5 Pordutos</p>
-            </li>
-            <div class="break-line"></div>
-            <li>Total: R$1000</li>
-          </ul>
-        </div>
-        <!-- <li class="total-cart text-right">
-            <p>subtotal</p>
-            <span id="sub-ins">em {{installments()}}x {{totalIns() | currency: 'BRL': true}}</span>
-            <span id="sub-cash">ou {{total() | currency: 'BRL': true}} à vista</span>
-          </li> -->
-        <!-- <ul class="navbar-nav cart-items">
-          <li class="nav-item">
-            Seu carrinho está vazio :/
-          </li>
-        </ul> -->
-      </app-menu-cart>
-
-      <!--
-      <ul class="navbar-nav cart-items" *ngIf="items().length">
-        <li class="nav-item" *ngFor="let product of items()">
-          <div class="media">
-            <img class="img-thumb" src="{{product.images[0]}}" onError="this.src='/assets/img/no-img.jpg';" alt="{{product.name}}">
-            <div class="media-body">
-              <h5 class="mt-0">{{product.name}} </h5>
-              <span>{{product.price.installments}}x de {{product.price.installmentValue | currency: 'BRL': true}}</span>
-              <span>ou R$ {{product.price.value | currency: 'BRL': true}} à vista</span>
-            </div>
-            <span class="remove-item" (click)="removeItem(product)">x</span>
-          </div>
-        </li>
-        <li class="total-cart text-right">
-          <p>subtotal</p>
-          <span id="sub-ins">em {{installments()}}x {{totalIns() | currency: 'BRL': true}}</span>
-          <span id="sub-cash">ou {{total() | currency: 'BRL': true}} à vista</span>
-        </li>
-      </ul>
-      <ul class="navbar-nav cart-items" *ngIf="items().length == 0">
-        <li class="nav-item">
-          Seu carrinho está vazio :/
-        </li>
-      </ul> -->
-
-      <!-- Adiciona ao carrinho no canto superior direito
-      e abre o modal de 'added to cart succesfully!' -->
-
-      <!-- dentro do modal terá o aviso de sucesso e dois botões:
-      - continuar comprando
-            - o continuar levará de volta para a grade de produtos
-
-      - finalizar compra -->
+      <!-- - finalizar compra -->
       <!-- - o finaliar compra levará até a tela do carrinho pra concluir -->
       <div class="btn-cart pb-4">
         <button
@@ -159,7 +80,14 @@
       <div class="break-line"></div>
     </div>
 
-    <!-- // FICHA TECNICA -->
+    <!-- Adiciona ao carrinho no canto superior direito
+    e abre o modal de 'added to cart succesfully!' -->
+
+    <!-- dentro do modal terá o aviso de sucesso e dois botões:
+    - continuar comprando
+          - o continuar levará de volta para a grade de produtos
+
+    // FICHA TECNICA -->
     <div class="accordion pt-5" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
@@ -255,3 +183,116 @@
     </div>
   </div>
 </div>
+
+<!-- Carrinho de compras -->
+<app-menu-cart #menu>
+  <div class="row" style="display: flex; justify-content: space-between;">
+    <div>
+      <h5 class="product-title pb-3 pt-2" style="font-size: xx-large">
+        SEU CARRINHO
+      </h5>
+
+      <p class="details pb-2" style="margin: 0px 0px 0px 0px">
+        TOTAL (5 produtos) R$1.379,95
+      </p>
+      <p class="details">
+        Os itens do seu carrinho não estão reservados. Finalize esta compra para
+        torná-los seus itens pessoais.
+      </p>
+    </div>
+
+    <div class="card mb-3 col-md-12 col-lg-12" style="max-width: 540px">
+      <div id="card-ajust" class="row g-0">
+        <div class="col-3 col-xs-4 col-md-4">
+          <img
+            src="/assets/img/home.jpg"
+            class="img-fluid rounded-start"
+            alt="..."
+          />
+        </div>
+        <div class="col-9 col-xs-8 col-md-8">
+          <div class="card-body" style="padding: 10px;">
+            <h5 class="card-title">CX. SEDA LION ROLLING CIRCUS 1 1/4 BLOODY STRAWBERRY</h5>
+            <p class="card-text">
+              <small class="text-muted"
+                ><strong class="ajust-value">Valor: R$269,00</strong>
+                <strong>Quantidade: 2</strong>
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <ul>
+        <li>
+          <h4>Resumo do pedido</h4>
+        </li>
+        <li>
+          <p>5 Pordutos</p>
+        </li>
+        <div class="break-line"></div>
+        <li class="pb-3">Total: R$1000</li>
+      </ul>
+    </div>
+
+    <!-- <ul class="navbar-nav cart-items">
+      <li class="nav-item">
+        <div class="media">
+          <div>
+            <img
+              class="img-fluid"
+              src="/assets/img/home.jpg"
+              onError="this.src='/assets/img/no-img.jpg';"
+              alt="error"
+            />
+          </div>
+          <div class="media-body">
+            <p class="title-card">CX. SEDA LION ROLLING CIRCUS 1 1/4 BLOODY STRAWBERRY</p>
+
+            <div class="card-details">
+              <span>R$1200$</span>
+              <span>Quantidade: 1</span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul> -->
+  </div>
+  <!-- <li class="total-cart text-right">
+      <p>subtotal</p>
+      <span id="sub-ins">em {{installments()}}x {{totalIns() | currency: 'BRL': true}}</span>
+      <span id="sub-cash">ou {{total() | currency: 'BRL': true}} à vista</span>
+    </li> -->
+  <!-- <ul class="navbar-nav cart-items">
+    <li class="nav-item">
+      Seu carrinho está vazio :/
+    </li>
+  </ul> -->
+</app-menu-cart>
+
+<!--
+<ul class="navbar-nav cart-items" *ngIf="items().length">
+  <li class="nav-item" *ngFor="let product of items()">
+    <div class="media">
+      <img class="img-thumb" src="{{product.images[0]}}" onError="this.src='/assets/img/no-img.jpg';" alt="{{product.name}}">
+      <div class="media-body">
+        <h5 class="mt-0">{{product.name}} </h5>
+        <span>{{product.price.installments}}x de {{product.price.installmentValue | currency: 'BRL': true}}</span>
+        <span>ou R$ {{product.price.value | currency: 'BRL': true}} à vista</span>
+      </div>
+      <span class="remove-item" (click)="removeItem(product)">x</span>
+    </div>
+  </li>
+  <li class="total-cart text-right">
+    <p>subtotal</p>
+    <span id="sub-ins">em {{installments()}}x {{totalIns() | currency: 'BRL': true}}</span>
+    <span id="sub-cash">ou {{total() | currency: 'BRL': true}} à vista</span>
+  </li>
+</ul>
+<ul class="navbar-nav cart-items" *ngIf="items().length == 0">
+  <li class="nav-item">
+    Seu carrinho está vazio :/
+  </li>
+</ul> -->

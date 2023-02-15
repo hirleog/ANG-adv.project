@@ -1,6 +1,7 @@
 .product-title {
   font-weight: 700;
 }
+
 .details {
   color: var(--subtitle-color);
   margin-bottom: 30px;
@@ -43,6 +44,7 @@
   /* padding-right: 10px; */
   margin-right: 10px;
 }
+
 .btn-buy button {
   height: 45px;
   background-color: var(--primary-color);
@@ -72,9 +74,11 @@
   color: yellow;
   border: 1px solid yellow;
 }
+
 .btn-cart {
   margin: 10px;
 }
+
 .btn-cart button {
   height: 45px;
   width: auto;
@@ -97,49 +101,112 @@
   display: flex;
   justify-content: center;
 }
+
 .cart-modal {
   display: flex;
   justify-content: flex-end;
 }
+
 .img-cart {
   height: auto;
   width: 97%;
 }
+
 .media {
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.432);
   width: 97%;
 }
-.media-body h5{
+
+.media-body h5 {
   margin-bottom: 100px;
 }
+
 .card-details {
   display: flex;
   justify-content: space-between;
   margin: 0px 3px 0px 0px;
 }
-/* .media span {
-  background-color: red;
-  display: flex;
-  align-items: flex-end;
-} */
+
+.title-card {
+  font-weight: 600;
+}
+.ajust-value {
+  margin-right: 12em;
+}
+.card-title {
+margin: 0px 0px 80px 0px;
+font-size: inherit;
+}
 
 @media screen and (min-width: 768px) {
   .img-cart {
     height: auto;
     width: 35%;
   }
+
   .media {
     display: flex;
     border: 1px solid rgba(0, 0, 0, 0.432);
     width: 97%;
   }
-  .media-body h5{
+
+  .media-body h5 {
     margin-bottom: 100px;
   }
+
   .card-details {
     display: flex;
     justify-content: space-between;
     margin: 0px 3px 0px 0px;
   }
+  .ajust-value {
+    margin-right: 12em;
+  }
+/* .card-title {
+  margin: 0px 0px 20% 0px;
+  font-size: inherit;
+} */
+
+}
+
+@media screen and (max-width: 768px) {
+  .img-fluid {
+    max-width: 105%;
+    height: auto;
+  }
+
+  .ajust-value {
+    margin-right: 9em;
+  }
+  /* .card-title {
+  margin: 0px 0px 14% 0px;
+  } */
+}
+@media screen and (max-width: 585px) {
+  /* .card-title {
+    margin: 0px 0px 12% 0px;
+    font-size: 14px;
+  } */
+}
+
+@media screen and (max-width: 475px) {
+  /* .card-title {
+    margin: 0px 0px 12% 0px;
+    font-size: 16px;
+  }
+  .card-text {
+    font-size: 15px
+  } */
+}
+@media screen and (max-width: 200px) {
+  /* .card-title {
+    margin: 0px 0px 12% 0px;
+    font-size: 16px;
+    background-color: red;
+  }
+  .card-text {
+    background-color: blue;
+    font-size: 15px
+  } */
 }
