@@ -57,6 +57,11 @@
   border-color: var(--secondary-color);
 }
 
+.button-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 .favorite {
@@ -114,7 +119,7 @@
 
 .media {
   display: flex;
-  border: 1px solid rgba(0, 0, 0, 0.432);
+  /* border: 1px solid rgba(0, 0, 0, 0.432); */
   width: 97%;
 }
 
@@ -131,12 +136,23 @@
 .title-card {
   font-weight: 600;
 }
+
 .ajust-value {
   margin-right: 12em;
 }
+
 .card-title {
-margin: 0px 0px 80px 0px;
-font-size: inherit;
+  margin: 0px 0px 80px 0px;
+  font-size: inherit;
+}
+
+.resume-list ul {
+  list-style-type: none;
+  /* Remove bullets */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margins */
 }
 
 @media screen and (min-width: 768px) {
@@ -147,7 +163,7 @@ font-size: inherit;
 
   .media {
     display: flex;
-    border: 1px solid rgba(0, 0, 0, 0.432);
+    /* border: 1px solid rgba(0, 0, 0, 0.432); */
     width: 97%;
   }
 
@@ -160,13 +176,19 @@ font-size: inherit;
     justify-content: space-between;
     margin: 0px 3px 0px 0px;
   }
+
   .ajust-value {
     margin-right: 12em;
   }
-.card-title {
-  margin: 0px 0px 20% 0px;
-  font-size: inherit;
-}
+
+  .card-title {
+    margin: 0px 0px 30% 0px;
+    font-size: inherit;
+  }
+
+  .card-body p {
+    font-size: 14px;
+  }
 
 }
 
@@ -179,24 +201,32 @@ font-size: inherit;
   .ajust-value {
     margin-right: 9em;
   }
+
   .card-title {
-  margin: 0px 0px 14% 0px;
+    margin: 0px 0px 20% 0px;
   }
 }
+
 @media screen and (max-width: 585px) {
   .card-title {
-    margin: 0px 0px 12% 0px;
+    margin: 0px 0px 20% 0px;
     font-size: 14px;
   }
 }
 
 @media screen and (max-width: 474px) {
   .card-title {
-    margin: 0px 0px 12% 0px;
+    margin: 0px 0px 20% 0px;
     font-size: 11px;
   }
+
   .card-text {
     font-size: 13px;
+  }
+
+  .car-body {
+    background-color: red;
+    padding: 11px;
   }
 }
 
@@ -205,6 +235,7 @@ font-size: inherit;
     margin: 0px 0px 12% 0px;
     font-size: 10px;
   }
+
   .card-text {
     font-size: 9px
   }

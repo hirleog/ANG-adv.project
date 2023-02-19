@@ -1,18 +1,17 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MenuCartComponent } from './../componentes/menu-cart/menu-cart.component';
 
-import { AnimaisRoutingModule } from './animais-routing.module';
-import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
-import { AnimalComponent } from './animal/animal.component';
-import { CartaoModule } from '../componentes/cartao/cartao.module';
-import { GradeFotosAnimaisComponent } from './grade-fotos-animais/grade-fotos-animais.component';
-import { DetalheAnimalComponent } from './detalhe-animal/detalhe-animal.component';
-import { ComentariosComponent } from './detalhe-animal/comentarios/comentarios.component';
-import { MensagemModule } from '../componentes/mensagem/mensagem.module';
-import { ReactiveFormsModule } from '@angular/forms';
-import { SharedModule } from '../shared/shared.module';
-import { NovoAnimalComponent } from './novo-animal/novo-animal.component';
 import { CartShoppingComponent } from '../componentes/cart-shopping/cart-shopping.component';
+import { CartaoModule } from '../componentes/cartao/cartao.module';
+import { SharedModule } from '../shared/shared.module';
+import { AnimaisRoutingModule } from './animais-routing.module';
+import { AnimalComponent } from './animal/animal.component';
+import { ComentariosComponent } from './detalhe-animal/comentarios/comentarios.component';
+import { DetalheAnimalComponent } from './detalhe-animal/detalhe-animal.component';
+import { GradeFotosAnimaisComponent } from './grade-fotos-animais/grade-fotos-animais.component';
+import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
+import { NovoAnimalComponent } from './novo-animal/novo-animal.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +22,7 @@ import { CartShoppingComponent } from '../componentes/cart-shopping/cart-shoppin
     ComentariosComponent,
     NovoAnimalComponent,
     CartShoppingComponent,
+    MenuCartComponent
   ],
   imports: [CommonModule, AnimaisRoutingModule, CartaoModule, SharedModule],
 })

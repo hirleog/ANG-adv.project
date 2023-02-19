@@ -36,13 +36,14 @@
             <div class="num fix">2</div>
             <div class="more fix">+</div>
           </div>
-          <div class="btn-buy" style="padding: 0px 0px 0px 0px">
-            <button
-              class="btn btn-primary button-buy"
-              (click)="menu.abreMenu()"
+          <div class="btn-buy" >
+            <!-- (click)="cart.abreCarrinho()" -->
+            <a
+            class="btn btn-primary button-buy"
+            [routerLink]="['/carrinho']"
             >
               Comprar
-            </button>
+          </a>
           </div>
           <!-- <a class="button-buy" href="https://mpago.la/2Er83xj">Comprar</a> -->
           <div class="favorite">
@@ -50,17 +51,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="btn-cart pb-4">
-        <button
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-          (click)="menu.abreMenu()"
-        >
-          Adicionar ao carrinho <i class="fa-light fa-cart-shopping"></i>
-        </button>
-      </div> -->
 
       <!-- - finalizar compra -->
       <!-- - o finaliar compra levará até a tela do carrinho pra concluir -->
@@ -185,8 +175,8 @@
 </div>
 
 <!-- Carrinho de compras -->
-<app-menu-cart #menu>
-  <div class="row" style="display: flex; justify-content: space-between;">
+<!-- <app-menu-cart #menu> -->
+  <!-- <div class="row" style="display: flex; justify-content: space-between;">
     <div>
       <h5 class="product-title pb-3 pt-2" style="font-size: xx-large">
         SEU CARRINHO
@@ -201,7 +191,7 @@
       </p>
     </div>
 
-    <div class="card mb-3 col-md-12 col-lg-12" style="max-width: 540px">
+    <div class="card mb-3 col-md-12 col-lg-12" style="max-width: 540px; padding: inherit;">
       <div id="card-ajust" class="row g-0">
         <div class="col-3 col-xs-4 col-md-4">
           <img
@@ -224,10 +214,10 @@
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 resume-list">
       <ul>
         <li>
-          <h4>Resumo do pedido</h4>
+          <h4 class="product-title">Resumo do pedido</h4>
         </li>
         <li>
           <p>5 Pordutos</p>
@@ -236,41 +226,9 @@
         <li class="pb-3">Total: R$1000</li>
       </ul>
     </div>
-
-    <!-- <ul class="navbar-nav cart-items">
-      <li class="nav-item">
-        <div class="media">
-          <div>
-            <img
-              class="img-fluid"
-              src="/assets/img/home.jpg"
-              onError="this.src='/assets/img/no-img.jpg';"
-              alt="error"
-            />
-          </div>
-          <div class="media-body">
-            <p class="title-card">CX. SEDA LION ROLLING CIRCUS 1 1/4 BLOODY STRAWBERRY</p>
-
-            <div class="card-details">
-              <span>R$1200$</span>
-              <span>Quantidade: 1</span>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul> -->
   </div>
-  <!-- <li class="total-cart text-right">
-      <p>subtotal</p>
-      <span id="sub-ins">em {{installments()}}x {{totalIns() | currency: 'BRL': true}}</span>
-      <span id="sub-cash">ou {{total() | currency: 'BRL': true}} à vista</span>
-    </li> -->
-  <!-- <ul class="navbar-nav cart-items">
-    <li class="nav-item">
-      Seu carrinho está vazio :/
-    </li>
-  </ul> -->
-</app-menu-cart>
+
+</app-menu-cart> -->
 
 <!--
 <ul class="navbar-nav cart-items" *ngIf="items().length">

@@ -1,6 +1,6 @@
 <header class="sticky-top">
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" style="color: rgb(4, 236, 4);">
+    <a class="navbar-brand" style="color: rgb(4, 236, 4)">
       <i
         class="fa fa-bars mr-2"
         (click)="menu.abreMenu()"
@@ -21,13 +21,27 @@
       </ul>
     </app-menu>
 
+    <div>
+      <a class="navbar-brand" style="color: rgb(4, 236, 4)">
+        <!-- (click)="cart.abreCarrinho()"
+        (keyup.space)="cart.abreCarrinho()" -->
+        <i
+          class="fa-solid fa-cart-shopping fa-1x"
+          [routerLink]="['carrinho']"
+          routerLinkActive="active"
+        >
+        </i>
+      </a>
+    </div>
 
-    <div *ngIf="user$ | async as user" style="display: flex; margin-left: 1em;">
+    <!-- <app-menu-cart #cart>
+      <p>works</p>
+    </app-menu-cart> -->
 
-      <div>
-        <i class="fa-light fa-cart-shopping"></i>
-      </div>
-
+    <div
+      *ngIf="user$ | async as user"
+      style="display: flex; margin: 0px 1em 0px 1em"
+    >
       <div *ngIf="user.name; else login">
         <i class="fa fa-user-circle mr-1"> </i>
         <a class="mr-1">{{ user.name }}</a>

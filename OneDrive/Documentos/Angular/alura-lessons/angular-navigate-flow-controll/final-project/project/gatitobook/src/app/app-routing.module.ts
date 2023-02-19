@@ -1,3 +1,4 @@
+import { MenuCartComponent } from './componentes/menu-cart/menu-cart.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AutenticacaoGuard } from './autenticacao/autenticacao.guard';
@@ -8,6 +9,10 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     redirectTo: 'home',
+  },
+  {
+    path: 'carrinho',
+    component: MenuCartComponent,
   },
   {
     path: 'home',

@@ -2,12 +2,70 @@
   <div class="menu-bar">
     <i
       class="fa fa-window-close"
-      (click)="abreMenu()"
-      (keyup.space)="abreMenu()"
+      (click)="goBack()"
+      (keyup.space)="goBack()"
     >
     </i>
-    <ng-content></ng-content>
+
+    <div>
+      <div class="row" style="display: flex; justify-content: space-between">
+        <div>
+          <h5 class="product-title pb-3 pt-2" style="font-size: xx-large">
+            SEU CARRINHO
+          </h5>
+
+          <p class="details pb-2" style="margin: 0px 0px 0px 0px">
+            TOTAL (5 produtos) R$1.379,95
+          </p>
+          <p class="details">
+            Os itens do seu carrinho não estão reservados. Finalize esta compra para
+            torná-los seus itens pessoais.
+          </p>
+        </div>
+
+        <div
+          class="card mb-3 col-md-12 col-lg-12"
+          style="max-width: 540px; padding: inherit"
+        >
+          <div id="card-ajust" class="row g-0">
+            <div class="col-3 col-xs-4 col-md-4">
+              <img
+                src="/assets/img/home.jpg"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="col-9 col-xs-8 col-md-8">
+              <div class="card-body" style="padding: 10px">
+                <h5 class="card-title">
+                  CX. SEDA LION ROLLING CIRCUS 1 1/4 BLOODY
+                </h5>
+                <p class="card-text">
+                  <small class="text-muted"
+                    ><strong class="ajust-value">Valor: R$269,00</strong>
+                    <strong>Quantidade: 2</strong>
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 resume-list">
+          <ul>
+            <li>
+              <h4 class="product-title">Resumo do pedido</h4>
+            </li>
+            <li>
+              <p>5 Pordutos</p>
+            </li>
+            <div class="break-line"></div>
+            <li class="pb-3">Total: R$1000</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <div class="overlay" (click)="abreMenu()"></div>
 </div>

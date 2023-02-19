@@ -1,3 +1,8 @@
 nav {
   padding: 5px 16px 5px 15px;
 }
+.fa-cart-shopping {
+  font-size: 24px;
+  margin-right: 1em;
+  color: var(--primary-color);
+}

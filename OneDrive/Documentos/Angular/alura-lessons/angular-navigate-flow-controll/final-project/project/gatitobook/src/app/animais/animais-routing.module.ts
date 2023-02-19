@@ -1,6 +1,6 @@
-import { CartShoppingComponent } from './../componentes/cart-shopping/cart-shopping.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { MenuCartComponent } from './../componentes/menu-cart/menu-cart.component';
 import { DetalheAnimalComponent } from './detalhe-animal/detalhe-animal.component';
 import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
 import { ListaAnimaisResolver } from './lista-animais/lista-animais.resolver';

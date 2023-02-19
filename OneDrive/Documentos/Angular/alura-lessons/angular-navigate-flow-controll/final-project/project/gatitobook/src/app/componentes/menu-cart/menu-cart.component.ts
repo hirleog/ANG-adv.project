@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,13 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class MenuCartComponent implements OnInit {
 
   mostraMenu = false;
+  mostraCarrinho = false;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
   abreMenu() {
     this.mostraMenu = !this.mostraMenu;
+  }
+  goBack() {
+    this.router.navigate(['animais'])
   }
 
 }
