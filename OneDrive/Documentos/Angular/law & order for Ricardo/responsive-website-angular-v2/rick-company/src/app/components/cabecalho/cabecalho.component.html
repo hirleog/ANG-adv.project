@@ -8,14 +8,22 @@
       >
       </i>
       <div class="img-fluid logo">
-        <img src="assets/logo 3.png" alt="">
+        <img src="assets/logo 3.png" alt="" />
       </div>
     </a>
 
     <app-menu #menu>
       <ul class="list-unstyled">
         <li>
-          <a>Novo Animal</a>
+          <a href="#sobre" (click)="menu.abreMenu()">Quem somos</a>
+        </li>
+        <li>
+          <a href="#features" (click)="menu.abreMenu()">O que fazemos</a>
+        </li>
+        <li>
+          <a href="#testimonials" (click)="menu.abreMenu()"
+            >O que acham de nós</a
+          >
         </li>
       </ul>
     </app-menu>

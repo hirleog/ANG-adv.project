@@ -4,6 +4,19 @@
   width: auto;
   height: auto;
 }
+
 .navbar-brand {
   display: flex;
 }
+
+/* @media screen and (max-width: 768px) {
+  .navbar {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+  } */
+
+  /* .navbar a {
+    display: flex;
+    justify-content: flex-start;
+  } */

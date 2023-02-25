@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* CORES :default */
+.html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #2c5ea1;
+}
+
 /* MOBILE CSS */
 @media screen and (max-width: 768px) {
   #navbar {
@@ -39,17 +48,17 @@
 
   /* Features */
   #features-container {
-  width: 100%;
-  margin: auto;
-  grid-column-gap: 50px;
-}
+    width: 100%;
+    margin: auto;
+    grid-column-gap: 50px;
+  }
 
-#features-container .feature:nth-child(2) {
+  #features-container .feature:nth-child(2) {
     margin: 15px 0;
     background-color: blue;
-} */
+  }
 
-  .cards {
+  */ .cards {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -80,7 +89,9 @@
   /* Gallery */
 
   #gallery-container {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: red;
   }
 
   .gallery-image {
@@ -103,6 +114,6 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   box-shadow: 1px #888;
-  -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, .5));
+  -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
   filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, .5));
 }

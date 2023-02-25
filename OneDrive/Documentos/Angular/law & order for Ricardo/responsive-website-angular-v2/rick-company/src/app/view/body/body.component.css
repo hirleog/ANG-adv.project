@@ -26,7 +26,7 @@ a {
   padding: 15px 60px;
   font-size: 1.1rem;
   text-transform: uppercase;
-  background: #111;
+  background: var(--main-color);
   color: #eee;
   border-radius: 5px;
   transition: background 500ms ease;
@@ -34,7 +34,7 @@ a {
 
 .btn:hover {
   cursor: pointer;
-  background: #000;
+  background: #3b75c7;
 }
 
 .headline {
@@ -42,7 +42,7 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
   letter-spacing: 2px;
 }
 
@@ -85,7 +85,7 @@ a {
   justify-content: center;
   align-items: center;
   color: #eee;
-  background: url('/assets/showcase.jpg') no-repeat center center/cover;
+  background: url('/assets/showcase4.png') no-repeat center center/cover;
 
   background-color: rgba(0, 0, 0, 0.637);
   background-blend-mode: color;
@@ -124,18 +124,16 @@ a {
   width: 25%;
 }
 
-/* #features-container {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 50px;
-  } */
+#features {
+  width: 100%;
+  height: auto;
+  background-color: #eee;
+}
 
 .feature {
   /* display: flex; */
   flex-direction: column;
-  background: #333;
+  background: var(--main-color);
   padding: 2em;
   border-radius: 5px;
   margin: 5px;
@@ -144,11 +142,16 @@ a {
 .feature-title {
   font-size: 1.5rem;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 
 .feature i {
   display: flex;
   justify-content: center;
+}
+.feature p {
+  text-align: center;
 }
 
 
@@ -228,8 +231,13 @@ a {
 .card-ajust {
   padding: 1em 3em 0em 0em;
 }
+
 .card-ajust p {
   font-style: italic;
+}
+.card-body h5 {
+  font-style: italic;
+  color: var(--main-color);
 }
 
 .square {
@@ -271,25 +279,29 @@ a {
   margin: 15px;
 }
 
+.detail img {
+  max-width: 70px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+}
+
 /* Gallery */
 #gallery {
-  width: 90%;
   margin: auto;
-  padding: 50px;
 }
 
 #gallery-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+
 }
 
 .gallery-image {
-  display: inline-block;
   width: 540px;
   height: 360px;
   border-radius: 5px;
+  padding: 5px;
 }
 
 .whatsapp-link {
