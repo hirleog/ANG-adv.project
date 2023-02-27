@@ -16,4 +16,36 @@
     color: red;
   }
 
-  
+  .align-card-btns {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(83, 83, 83, 0.315);
+    border-radius: 0.375rem;
+    font-size: larger;
+    width: 90px;
+    height: 45px;
+  }
+
+  .favorite:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(83, 83, 83, 0.315);
+    border-radius: 0.375rem;
+    font-size: larger;
+    color: yellow;
+    border: 1px solid yellow;
+    width: 90px;
+    height: 45px;
+  }
+
+  .custom-tooltip {
+    --bs-tooltip-bg: var(--bs-primary);
+  }

@@ -8,7 +8,7 @@
       <app-cartao>
         <a [routerLink]="['/animais', animal.id]">
           <app-animal
-          class="efeito"
+            class="efeito"
             [url]="animal.url"
             [descricao]="animal.description"
           ></app-animal>
@@ -21,7 +21,14 @@
           <!-- {{ product.value }} -->
         </h4>
 
-        <app-buy-button>
+        <div class="align-card-btns">
+          <div>
+            <button class="favorite" (click)="addCart(animal)">
+              <i class="fa-solid fa-cart-shopping fa-1x"> </i>
+            </button>
+          </div>
+          <!-- (click)="addCart(animal.)" -->
+
           <div class="btn-buy">
             <a
               class="button-buy"
@@ -31,7 +38,27 @@
               >Comprar</a
             >
           </div>
-        </app-buy-button>
+
+          <div>
+            <div>
+              <button class="favorite">
+                <i class="fa-solid fa-star"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- <app-buy-button>
+          <div class="btn-buy">
+            <a
+              class="button-buy"
+              [routerLink]="['/animais', animal.id]"
+              (mouseover)="show = true"
+              (mouseleave)="show = false"
+              >Comprar</a
+            >
+          </div>
+        </app-buy-button> -->
       </app-cartao>
       <!-- <div class="align-div ml-1 mb-2">
       <textarea

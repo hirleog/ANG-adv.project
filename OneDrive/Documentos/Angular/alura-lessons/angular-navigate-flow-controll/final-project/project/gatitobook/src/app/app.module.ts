@@ -1,3 +1,4 @@
+import { CartService } from './componentes/cart-shopping/cart-shopping.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,7 +20,9 @@ import { RodapeModule } from './componentes/rodape/rodape.module';
     AutenticacaoModule,
 
   ],
-  providers: [],
+  providers: [
+    CartService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,3 +1,4 @@
+import { CartService } from './../../componentes/cart-shopping/cart-shopping.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -20,12 +21,19 @@ export class GradeFotosAnimaisComponent implements OnInit {
   constructor(
     private animaisService: AnimaisService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private cartService: CartService
 
 
   ) { }
 
   ngOnInit(): void { }
+
+  addCart(Product: any) {
+    // NProgress.start()
+    this.cartService.addItem(Product)
+    // NProgress.done()
+  }
 
   // curtir() {
   //   this.animaisService.curtir(this.animalId).subscribe((curtida) => {

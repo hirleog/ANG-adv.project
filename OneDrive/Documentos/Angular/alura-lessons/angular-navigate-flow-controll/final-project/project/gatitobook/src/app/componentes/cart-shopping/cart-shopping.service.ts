@@ -1,21 +1,22 @@
-import { Injectable } from '@angular/core'
+import { Injectable } from '@angular/core';
+import { Animais } from './../../animais/animais';
 
-import 'rxjs/add/operator/catch'
-import 'rxjs/add/operator/map'
-
-import { Product } from '../card-product/card-product.model'
-
+// import 'rxjs/add/operator/catch';
+// import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CartService {
 
   constructor() { }
 
-  items: Product[] = []
+  items: Animais[] = []
 
-  addItem(item: Product) {
+  addItem(item: Animais) {
     this.items.push(item)
     sessionStorage.setItem("cart", JSON.stringify(this.items))
+  }
+  getItems() {
+    return this.items;
   }
 
   removeItem(Product: any) {
@@ -24,21 +25,21 @@ export class CartService {
     sessionStorage.setItem("cart", JSON.stringify(this.items))
   }
 
-  total(): number {
-    return this.items
-      .map(item => item.price.value)
-      .reduce((prev, value) => prev + value, 0)
-  }
-  totalIns(): number {
-    return this.items
-      .map(item => item.price.installmentValue)
-      .reduce((prev, value) => prev + value, 0)
-  }
-  installment(): number {
-    return Math.max.apply(
-      Math, this.items
-        .map(function (prod) {
-          return prod.price.installments;
-        }))
-  }
+  // total(): number {
+  //   return this.items
+  //     .map(item => item.price.value)
+  //     .reduce((prev, value) => prev + value, 0)
+  // }
+  // totalIns(): number {
+  //   return this.items
+  //     .map(item => item.price.installmentValue)
+  //     .reduce((prev, value) => prev + value, 0)
+  // }
+  // installment(): number {
+  //   return Math.max.apply(
+  //     Math, this.items
+  //       .map(function (prod) {
+  //         return prod.price.installments;
+  //       }))
+  // }
 }
