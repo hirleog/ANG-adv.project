@@ -1,3 +1,4 @@
+import { SharedService } from './../../shared/shared.service';
 import { Injectable } from '@angular/core';
 import { Animais } from './../../animais/animais';
 
@@ -7,17 +8,22 @@ import { Animais } from './../../animais/animais';
 @Injectable()
 export class CartService {
 
-  constructor() { }
+  constructor(
+    private sharedService: SharedService
+  ) { }
 
   items: Animais[] = []
 
   addItem(item: Animais) {
     this.items.push(item)
     sessionStorage.setItem("cart", JSON.stringify(this.items))
+
+    this.sharedService.setProduct(this.items)
   }
-  getItems() {
-    return this.items;
-  }
+  // getItems() {
+  //   return this.items
+  //     // .map((products) => products.)
+  // }
 
   removeItem(Product: any) {
     this.items.splice(this.items.indexOf(Product), 1)

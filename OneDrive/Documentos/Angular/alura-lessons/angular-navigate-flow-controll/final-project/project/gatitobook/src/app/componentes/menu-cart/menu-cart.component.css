@@ -28,13 +28,22 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.4);
 } */
+
+.ajust-cart-menu {
+  height:120px;
+  overflow:scroll;
+  overflow-x:hidden;
+}
+
 .product-title {
   font-weight: 700;
 }
+
 .details {
   color: var(--subtitle-color);
   margin-bottom: 30px;
 }
+
 @media screen and (min-width: 768px) {
   .menu-bar {
     position: fixed;
@@ -195,4 +204,3 @@
     font-size: 9px
   }
 }
-
