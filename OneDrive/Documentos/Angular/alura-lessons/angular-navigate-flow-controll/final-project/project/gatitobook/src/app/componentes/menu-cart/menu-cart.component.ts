@@ -34,7 +34,7 @@ export class MenuCartComponent implements OnInit {
 
   getProducts() {
     this.items = this.sharedService.getProduct()
-    console.log(this.items, 'itemsObj');
+    console.log(typeof this.items, 'itemsObj');
 
   }
 
