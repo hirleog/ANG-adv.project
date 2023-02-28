@@ -14,7 +14,6 @@
       </h5>
 
       <div>
-
         <ng-container *ngIf="items === undefined; else hasProducts">
           <p class="details pb-2">Seu carrinho está vazio :/</p>
 
@@ -28,30 +27,11 @@
               TOTAL (5 produtos) 10.000$
             </p>
             <p class="details">
-              Os itens do seu carrinho não estão reservados. Finalize esta compra
-              para torná-los seus itens pessoais.
+              Os itens do seu carrinho não estão reservados. Finalize esta
+              compra para torná-los seus itens pessoais.
             </p>
           </div>
         </ng-template>
-
-
-        <!-- <div *ngIf="items === undefined">
-          <p class="details pb-2">Seu carrinho está vazio :/</p>
-
-          <button class="btn btn-primary" (click)="goBack()">
-            Voltar as compras
-          </button>
-        </div>
-
-        <div *ngIf="items !== undefined">
-          <p class="details pb-2" style="margin: 0px 0px 0px 0px">
-            TOTAL (5 produtos) 10.000$
-          </p>
-          <p class="details">
-            Os itens do seu carrinho não estão reservados. Finalize esta compra
-            para torná-los seus itens pessoais.
-          </p>
-        </div> -->
       </div>
 
       <div class="col-md-8">
@@ -86,7 +66,7 @@
         </div>
       </div>
 
-      <div class="col-md-4 resume-list" *ngIf="items.length !== 0">
+      <div class="col-md-4 resume-list" *ngIf="items !== undefined">
         <ul>
           <li>
             <h4 class="product-title">Resumo do pedido</h4>

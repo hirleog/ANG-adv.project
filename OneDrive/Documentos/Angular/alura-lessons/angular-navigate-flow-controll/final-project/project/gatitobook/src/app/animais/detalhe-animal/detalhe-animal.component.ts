@@ -1,10 +1,9 @@
-import { Comentarios } from './comentarios/comentarios';
-import { FormGroup } from '@angular/forms';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Animal } from '../animais';
 import { AnimaisService } from '../animais.service';
+import { SharedService } from './../../shared/shared.service';
 
 @Component({
   selector: 'app-detalhe-animal',
@@ -21,15 +20,21 @@ export class DetalheAnimalComponent implements OnInit {
 
   mostraCartBar = false;
 
+  counter = 0;
+  @Input() items: any;
+
   constructor(
     private animaisService: AnimaisService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private sharedService: SharedService
   ) { }
 
   ngOnInit(): void {
     this.animalId = this.activatedRoute.snapshot.params.animalId;
     this.animal$ = this.animaisService.buscaPorID(this.animalId);
+
+    this.getProducts();
   }
 
   abreCart() {
@@ -53,9 +58,30 @@ export class DetalheAnimalComponent implements OnInit {
       (error) => console.log(error)
     );
   }
+  public getProducts() {
+    this.items = this.sharedService.getProduct()
+    console.log(this.items, 'itemsObj');
+  }
 
-  goToCart() {
-    const id = this.animaisService.buscaPorID(this.animalId);
-    this.router.navigate([`animais/${id}/carrinho/`])
+  // onCourseSelected(course: any){
+  //   console.log(course, 'lalla')
+  // }
+
+  public goToCart() {
+    this.router.navigate(['/carrinho'])
+    // this.getProducts()
+
+  }
+
+
+
+  public increment() {
+    // let data = 0;
+    this.counter = this.counter + 1;
+    console.log(this.counter, 'lalla');
+  }
+  public decrement() {
+    this.counter = this.counter - 1;
+    // document.getElementById("counting").innerText = data;
   }
 }

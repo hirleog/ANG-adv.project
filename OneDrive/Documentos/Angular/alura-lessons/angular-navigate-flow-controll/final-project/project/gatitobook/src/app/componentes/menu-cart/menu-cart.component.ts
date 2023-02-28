@@ -1,7 +1,7 @@
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { SharedService } from './../../shared/shared.service';
 import { CartService } from './../cart-shopping/cart-shopping.service';
-import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu-cart',
@@ -14,6 +14,10 @@ export class MenuCartComponent implements OnInit {
   mostraCarrinho = false;
   items: any;
   itemsObj: any;
+
+  @Output()
+  courseSelected = new EventEmitter<any>();
+
 
   constructor(
     private router: Router,
@@ -34,8 +38,9 @@ export class MenuCartComponent implements OnInit {
 
   getProducts() {
     this.items = this.sharedService.getProduct()
-    console.log(typeof this.items, 'itemsObj');
+    console.log(this.items, 'itemsObj');
 
+    this.courseSelected.emit(this.items);
   }
 
 }

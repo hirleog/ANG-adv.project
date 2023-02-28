@@ -21,9 +21,17 @@
           <!-- {{ product.value }} -->
         </h4>
 
-        <div class="align-card-btns">
+        <div class="align-card-btns btn-group">
           <div>
-            <button class="favorite" (click)="addCart(animal)">
+            <button
+              class="favorite btn"
+              style="
+                --bs-btn-padding-y: 12px;
+                --bs-btn-padding-x: 30px;
+                --bs-btn-font-size: 0.75rem;
+              "
+              (click)="addCart(animal)"
+            >
               <i class="fa-solid fa-cart-shopping fa-1x"> </i>
             </button>
           </div>
@@ -40,11 +48,17 @@
           </div>
 
           <div>
-            <div>
-              <button class="favorite">
-                <i class="fa-solid fa-star"></i>
-              </button>
-            </div>
+            <button
+              class="favorite btn"
+              style="
+                --bs-btn-padding-y: 12px;
+                --bs-btn-padding-x: 30px;
+                --bs-btn-font-size: 0.75rem;
+              "
+              (click)="addCart(animal)"
+            >
+              <i class="fa-solid fa-star"></i>
+            </button>
           </div>
         </div>
 
