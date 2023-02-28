@@ -1,9 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from './../../componentes/cart-shopping/cart-shopping.service';
+import { SharedService } from './../../shared/shared.service';
+import { Comentarios } from './comentarios/comentarios';
+import { FormGroup } from '@angular/forms';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Animal } from '../animais';
 import { AnimaisService } from '../animais.service';
-import { SharedService } from './../../shared/shared.service';
 
 @Component({
   selector: 'app-detalhe-animal',
@@ -21,55 +24,53 @@ export class DetalheAnimalComponent implements OnInit {
   mostraCartBar = false;
 
   counter = 0;
-  @Input() items: any;
+  items: any;
 
   constructor(
     private animaisService: AnimaisService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private sharedService: SharedService
+    private sharedService: SharedService,
+    private cartService: CartService,
+
   ) { }
 
   ngOnInit(): void {
     this.animalId = this.activatedRoute.snapshot.params.animalId;
     this.animal$ = this.animaisService.buscaPorID(this.animalId);
 
-    this.getProducts();
   }
 
-  abreCart() {
-    this.mostraCartBar = !this.mostraCartBar;
-  }
-
-  curtir() {
-    this.animaisService.curtir(this.animalId).subscribe((curtida) => {
-      if (curtida) {
-        this.animal$ = this.animaisService.buscaPorID(this.animalId);
-        this.colorBtn = !this.colorBtn
-      }
-    });
-  }
-
-  excluir() {
-    this.animaisService.excluiAnimal(this.animalId).subscribe(
-      () => {
-        this.router.navigate(['/animais/']);
-      },
-      (error) => console.log(error)
-    );
-  }
-  public getProducts() {
-    this.items = this.sharedService.getProduct()
-    console.log(this.items, 'itemsObj');
-  }
-
-  // onCourseSelected(course: any){
-  //   console.log(course, 'lalla')
+  // abreCart() {
+  //   this.mostraCartBar = !this.mostraCartBar;
   // }
 
-  public goToCart() {
+  // curtir() {
+  //   this.animaisService.curtir(this.animalId).subscribe((curtida) => {
+  //     if (curtida) {
+  //       this.animal$ = this.animaisService.buscaPorID(this.animalId);
+  //       this.colorBtn = !this.colorBtn
+  //     }
+  //   });
+  // }
+
+  // excluir() {
+  //   this.animaisService.excluiAnimal(this.animalId).subscribe(
+  //     () => {
+  //       this.router.navigate(['/animais/']);
+  //     },
+  //     (error) => console.log(error)
+  //   );
+  // }
+
+  public goToCart(Product: any) {
+    this.cartService.addItem(Product)
     this.router.navigate(['/carrinho'])
-    // this.getProducts()
+    console.log(Product, 'detalhe-animal');
+  }
+
+  public addToCart(Product: any) {
+    this.cartService.addItem(Product)
 
   }
 

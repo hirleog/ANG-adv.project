@@ -42,7 +42,7 @@
             <!-- (click)="cart.abreCarrinho()" -->
             <button
             class="btn btn-primary button-buy"
-            (click)="goToCart()"
+            (click)="goToCart(animal)"
             >
               Comprar
           </button>
@@ -61,7 +61,7 @@
         data-bs-target="#exampleModal" -->
         <button
           class="btn btn-primary"
-          (click)="getProducts()"
+          (click)="addToCart(animal)"
         >
           > Adicionar ao carrinho
           <i class="fa-regular fa-cart-shopping"></i>

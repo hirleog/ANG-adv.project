@@ -32,6 +32,8 @@ export class GradeFotosAnimaisComponent implements OnInit {
   addCart(Product: any) {
     // NProgress.start()
     this.cartService.addItem(Product)
+    console.log(Product, "grade-fotos");
+
     // NProgress.done()
   }
 
